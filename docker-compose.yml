@@ -12,5 +12,6 @@ services:
       - DEFAULT_REGION=us-east-1
       - DATA_DIR=/var/lib/localstack/data
     volumes:
+      - "./init.sh:/etc/localstack/init/ready.d/init.sh"
       - "/c/tmp/localstack-data:/var/lib/localstack/data"
       - "//./pipe/docker_engine://./pipe/docker_engine"
