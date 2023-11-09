@@ -51,4 +51,17 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
 ```
 
+### Initialization
+
+An initialization script has been created to create the necessary initial structures, 
+for more information go to [Initialization Hooks](https://docs.localstack.cloud/references/init-hooks/)
+
+***init.sh***
+````bash
+#!/bin/bash
+
+echo "Creating buckets..."
+awslocal s3api create-bucket --bucket sample-bucket
+````
+
 For more details on installation go to [Local Stack Intalation Guide](https://docs.localstack.cloud/getting-started/installation/)
