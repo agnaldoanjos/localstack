@@ -25,6 +25,8 @@ SET AWS_ENDPOINT_URL=http://localhost:4566
 ### Image
 ```agsl
 docker pull localstack/localstack:2.3.2
+
+podman pull localstack/localstack:latest
 ```
 
 ### Container 
