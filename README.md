@@ -30,6 +30,8 @@ docker pull localstack/localstack:2.3.2
 ### Container 
 ```agsl
 docker run --rm -d -it -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack:2.3.2
+
+podman run --rm -d --name localstack -p 4566:4566 -p 4510-4559:4510-4559 -p 4571:4571 --env AWS_DEFAULT_REGION=sa-east-1 localstack/localstack:latest
 ```
 
 ### Compose 
